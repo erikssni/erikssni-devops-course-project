@@ -39,7 +39,7 @@ fs.readFile('./jokes.json',
 
 app.message(/.*/, async ({ command, say }) => {
   try {
-    say("hello! Write /joke to hear a joke");
+    say("Hi! Write /joke to hear a joke");
   } catch (error) {
       console.log("err")
     console.error(error);
