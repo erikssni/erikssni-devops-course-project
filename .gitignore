@@ -1,2 +1,2 @@
-# Object file
-*.env
+# .env file
+.env
