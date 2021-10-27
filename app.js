@@ -14,8 +14,7 @@ app.command("/joke", async ({ command, ack, say }) => {
 
 //file system module
 var fs = require('fs');
- 
-// read file sample.json file
+
 fs.readFile('./jokes.json',
     
     function(err, data) {       
@@ -26,11 +25,15 @@ fs.readFile('./jokes.json',
         var jsonParsed = JSON.parse(jsonData);
 
         // choose random joke
-        const randomJoke = Math.round((Math.random() * jsonParsed.persons.length));
+        const randomJoke = Math.round((Math.random() * jsonParsed.jokes.length));
 
         // say joke
-        say(jsonParsed.persons[randomJoke].body);
+        say(jsonParsed.jokes[randomJoke].setup + "\n" + jsonParsed.jokes[randomJoke].punchline);
 });
+
+
+
+
     } catch (error) {
         console.log("err")
     console.error(error);
