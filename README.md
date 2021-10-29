@@ -1,2 +1,2 @@
 # devops-course-project
-slackbot
+slackbot Joke-O-Matic
